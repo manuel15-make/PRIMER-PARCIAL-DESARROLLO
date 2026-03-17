@@ -22,7 +22,7 @@ e.preventDefault()
 let usuarioIngresado = document.getElementById("usuario").value
 let passwordIngresado = document.getElementById("password").value
 
-/* datos guardados en register */
+
 
 let usuarioGuardado = localStorage.getItem("usuario")
 let passwordGuardado = localStorage.getItem("password")
