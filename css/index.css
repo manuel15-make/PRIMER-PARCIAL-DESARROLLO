@@ -13,8 +13,7 @@ body {
 .content {
     flex: 1;
     padding: 2rem;
-    background-color: #FFFFFF; 
-    color: #522566; 
+    background-color: white;
 }
 .content h2 {
     color: #522566;

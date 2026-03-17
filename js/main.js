@@ -10,8 +10,37 @@ async function loadComponent(url, placeholderId) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadComponent('components/header/header.html', 'header-placeholder');
-    loadComponent('components/sidebar/sidebar.html', 'sidebar-placeholder');
-    loadComponent('components/footer/footer.html', 'footer-placeholder');
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    if (sidebar && overlay) {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Cargar componentes en orden (esperamos a que termine cada uno)
+    await loadComponent('components/header/header.html', 'header-placeholder');
+    await loadComponent('components/sidebar/sidebar.html', 'sidebar-placeholder');
+    await loadComponent('components/footer/footer.html', 'footer-placeholder');
+
+    // Una vez cargados, asignar eventos
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const overlay = document.getElementById('sidebar-overlay');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', toggleSidebar);
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', toggleSidebar);
+    }
+
+    // Opcional: cerrar sidebar al hacer clic en un enlace
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', toggleSidebar);
+    });
 });
