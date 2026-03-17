@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #F8EDFB; 
 }
 .main-container {
     display: flex;
@@ -12,5 +13,12 @@ body {
 .content {
     flex: 1;
     padding: 2rem;
-    background-color: #fff;
+    background-color: #FFFFFF; 
+    color: #522566; 
+}
+.content h2 {
+    color: #522566;
+}
+.content p {
+    color: #333; 
 }

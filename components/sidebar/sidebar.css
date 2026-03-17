@@ -1,6 +1,6 @@
 .sidebar {
     width: 250px;
-    background-color: #f4f4f4;
+    background-color: #EADFF0; 
     padding: 1rem;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
@@ -13,14 +13,14 @@
 }
 .sidebar nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #522566; 
     font-weight: bold;
     display: block;
     padding: 0.5rem;
     border-radius: 4px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 .sidebar nav ul li a:hover {
-    background-color: #c40000;
-    color: white;
+    background-color: #AD74C3; 
+    color: #F8EDFB; 
 }
