@@ -10,8 +10,21 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    
     <div id="header-placeholder"></div>
     
+    <div class="cart-icon" onclick="toggleCart()">
+    <span id="cart-count">0</span>
+    </div>
+    
+    <div id="cart-panel" class="cart-panel">
+    <h3>Tu carrito</h3>
+    <div id="cart-items"></div>
+
+    <h4>Total: $<span id="cart-total">0</span></h4>
+
+    <button onclick="toggleCart()">Cerrar</button>
+</div>
     <div class="main-container">
         <div id="sidebar-placeholder"></div>
         <main class="content">
