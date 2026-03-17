@@ -1,41 +1,40 @@
-document.getElementById("loginForm").addEventListener("submit", function(e){
+function togglePassword(){
 
-e.preventDefault();
+let password = document.getElementById("password")
 
-const usuario = document.getElementById("usuario").value.trim();
-const password = document.getElementById("password").value.trim();
-const error = document.getElementById("error");
+if(password.type === "password"){
 
-if(usuario === "" || password === ""){
-
-error.textContent = "Por favor completa todos los campos";
-return;
-
-}
-
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-let valido = usuarios.find(u => u.usuario === usuario && u.password === password);
-
-if(valido){
-
-localStorage.setItem("sesion","activa");
-localStorage.setItem("usuarioActivo",usuario);
-
-window.location.href = "index.html";
+password.type = "text"
 
 }else{
 
-error.textContent = "Usuario o contraseña incorrectos";
+password.type = "password"
 
 }
 
-});
+}
 
-function togglePassword(){
 
-const password = document.getElementById("password");
+document.getElementById("loginForm").addEventListener("submit", function(e){
 
-password.type = password.type === "password" ? "text" : "password";
+e.preventDefault()
+
+let usuarioIngresado = document.getElementById("usuario").value
+let passwordIngresado = document.getElementById("password").value
+
+/* datos guardados en register */
+
+let usuarioGuardado = localStorage.getItem("usuario")
+let passwordGuardado = localStorage.getItem("password")
+
+if(usuarioIngresado === usuarioGuardado && passwordIngresado === passwordGuardado){
+
+window.location.href = "index.html"
+
+}else{
+
+document.getElementById("error").innerText = "Usuario o contraseña incorrectos"
 
 }
+
+})
