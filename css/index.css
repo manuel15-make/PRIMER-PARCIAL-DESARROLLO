@@ -122,7 +122,6 @@ html, body {
     transform: scale(0.98);
 }
 
-/* Ajuste responsive */
 @media (max-width: 768px) {
     .hero-offer {
         font-size: 3rem;
