@@ -29,14 +29,33 @@ html, body {
 }
 
 .hero-banner {
-    background: linear-gradient(135deg, #522566 0%, #7A3A8E 100%);
-    color: #F8EDFB;
-    padding: 3rem 2rem;
+   
+    background-image: url('/img/Banner-gym.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    padding: 4rem 2rem;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(82, 37, 102, 0.3);
     margin: 1rem 0;
+    
+    
+    position: relative;
+    color: #F8EDFB;
+    min-height: 400px;           
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    box-sizing: border-box;
+    max-width: 100%;
 }
+
 
 .hero-title {
     font-size: 2.2rem;
