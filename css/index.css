@@ -6,6 +6,12 @@ body {
     min-height: 100vh;
     background-color: #F8EDFB; 
 }
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
 .main-container {
     display: flex;
     flex: 1;
