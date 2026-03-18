@@ -1,28 +1,33 @@
 .site-header {
+    background-color: #522566;
+    color: #F8EDFB;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 .hamburger {
-    background: rgba(255, 255, 255, 0.15);  
+    background: rgba(255, 255, 255, 0.15);
     border: none;
-    border-radius: 8px;                     
-    color: rgba(177, 11, 223, 0.466);                             
-    font-size: 2.2rem;                        
+    border-radius: 8px;
+    color: white;
+    font-size: 2.2rem;
     cursor: pointer;
     position: absolute;
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0.5rem 1rem;                     
+    padding: 0.5rem 1rem;
     line-height: 1;
     transition: background 0.3s, opacity 0.3s;
-    z-index: 10;                              
+    z-index: 10;
 }
 
 .hamburger:hover {
-    background: rgba(255, 255, 255, 0.3);     
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .hamburger:active {
@@ -30,4 +35,7 @@
 }
 .logo h1 {
     margin: 0;
+    font-size: 3rem; 
+    font-weight: 800; 
+    letter-spacing: 2px; 
 }
