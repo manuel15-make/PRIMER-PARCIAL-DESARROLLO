@@ -1,9 +1,132 @@
 .site-footer {
     background-color: #522566; 
-    color: #EADFF0; 
+    color: #F8EDFB;             
+    padding: 3rem 2rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-col h3 {
+    color: #F8EDFB;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #AD74C3;  
+    padding-bottom: 0.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-col ul li a {
+    color: #EADFF0;  
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #F8EDFB;
+    text-decoration: underline;
+}
+
+
+.footer-col ul li {
+    color: #EADFF0;
+    line-height: 1.5;
+}
+
+
+.garantia, .disenado, .horarios {
+    margin-bottom: 1.5rem;
+}
+
+.garantia p, .disenado p, .horarios p {
+    margin: 0.25rem 0;
+    color: #EADFF0;
+    font-size: 0.9rem;
+}
+
+.horarios p strong {
+    color: #F8EDFB;
+    font-weight: 600;
+}
+
+
+.newsletter p {
+    color: #EADFF0;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #F8EDFB;
+    color: #522566;
+    font-size: 0.9rem;
+}
+
+.newsletter-form input::placeholder {
+    color: #7A3A8E;
+    opacity: 0.7;
+}
+
+.newsletter-form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #AD74C3, #7A3A8E);
+    color: #F8EDFB;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.newsletter-form button:hover {
+    opacity: 0.9;
+}
+
+
+.footer-bottom {
     text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #AD74C3;
+    color: #EADFF0;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .site-footer {
+        padding: 2rem 1rem;
+    }
 }
