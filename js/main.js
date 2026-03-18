@@ -44,3 +44,39 @@ document.addEventListener('DOMContentLoaded', async () => {
         link.addEventListener('click', toggleSidebar);
     });
 });
+let carrito = [];
+
+function toggleCart() {
+    document.getElementById("cart-panel").classList.toggle("active");
+}
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    let contenedor = document.getElementById("cart-items");
+    let total = 0;
+
+    contenedor.innerHTML = "";
+
+    carrito.forEach((item, index) => {
+        total += item.precio;
+
+        contenedor.innerHTML += `
+            <div class="cart-item">
+                ${item.nombre} - $${item.precio}
+                <button onclick="eliminar(${index})">X</button>
+            </div>
+        `;
+    });
+
+    document.getElementById("cart-total").innerText = total;
+    document.getElementById("cart-count").innerText = carrito.length;
+}
+
+function eliminar(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+}
