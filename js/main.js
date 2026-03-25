@@ -80,3 +80,5 @@ function eliminar(index) {
     carrito.splice(index, 1);
     actualizarCarrito();
 }
+
+

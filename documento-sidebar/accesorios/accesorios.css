@@ -10,7 +10,7 @@ background:#000;
 color:white;
 }
 
-/* HEADER */
+
 
 .header{
 background:#990000;
@@ -18,7 +18,7 @@ padding:20px;
 text-align:center;
 }
 
-/* GRID PRODUCTOS */
+
 
 .productos{
 
@@ -32,7 +32,7 @@ padding:30px;
 
 }
 
-/* CARD */
+
 
 .card{
 
@@ -53,7 +53,7 @@ transform:scale(1.05);
 box-shadow:0 10px 25px rgba(255,0,0,0.4);
 }
 
-/* IMAGEN */
+
 
 .card img{
 
@@ -66,7 +66,7 @@ border-radius:10px;
 
 }
 
-/* TEXTO */
+
 
 .card h3{
 margin:10px 0;
